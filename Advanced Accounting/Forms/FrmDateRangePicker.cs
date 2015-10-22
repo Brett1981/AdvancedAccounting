@@ -46,7 +46,9 @@ namespace Advanced_Accounting.Forms
                                 StartPosition = FormStartPosition.CenterScreen
                             };
 
+            
             _aLogBookForm.Show();
+
         }
 
         private void FrmDateRangePicker_FormClosed

@@ -47,6 +47,7 @@ namespace Advanced_Accounting.Forms
             {
                 string currentLocation = AppDomain.CurrentDomain.BaseDirectory + "LogFileExports\\";
                 Directory.CreateDirectory(currentLocation);
+                ((DataTable)(dgv.DataSource)).Columns[1].DataType = typeof(string);
                 string aFileLocation = DataTableToExcel.MyDataTableExtensions.ExportToExcel
                     (
                         (DataTable) (dgv.DataSource),
@@ -58,6 +59,7 @@ namespace Advanced_Accounting.Forms
                         (
                             aFileLocation,
                             aprintdialog);
+                    
                 }
                 catch (Exception e)
                 {
